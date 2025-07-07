@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post to Elijah Social Domain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="post.html">Post</a>
+    </nav>
+    
+    <h1>Upload your Simple Domain</h1>
+    <form action="#" method="POST">
+        <label for="post-content">Post Content:</label>
+        <textarea id="post-content" name="post-content" rows="4" required></textarea><br>
+
+        <input type="submit" value="Post">
+    </form>
+    
+    <img src="Images/Screenshot 2024-05-24 114726.png" alt="Example Image" id="post-image">
+    <h3>Like the post</h3>
+ <div class = "reactions-area">
+<button class = "like-button">Like</button>    
+<div class = "reaction-box">
+    <img src ="Images/default.png" alt = "Crying" class = "reaction-icon">
+    <img src ="Images/cover.thumb256.jpeg" alt = "Wink" class = "reaction-icon">
+    <img src ="Images/353cf42e8bc42bc.png" alt = "Like" class = "reaction-icon">
+</div>
+<span class = "likes-count" >0 likes</span>
+</div>
+    <section id="comment-section">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <label for="commentText">Your Comment:</label>
+            <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
+            
+            <label for="postId">Post ID (optional):</label>
+            <input type="text" id="postId" placeholder="Enter the related post ID">
+            
+            <button type="submit">Submit Comment</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Elijah's Domain. All rights reserved.</p>
+</footer>
+form id="commentForm">
+    <textarea id="commentText" placeholder="Write your comment" required></textarea>
+    <input type="text" id="postId" placeholder="Post ID (optional)" />
+    <button type="submit">Submit Comment</button>
+</form>
+<script src="userComment.js"></script>
+ <script type="module" src ="scripts/user-script.js"></script>
+</body>
+</html>
