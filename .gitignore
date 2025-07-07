@@ -1,0 +1,21 @@
+# Ignore environment variable files
+.env
+
+# Ignore node_modules (for Node.js projects)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Python cache files 
+__pycache__/
+*.py[cod]
+ 
+node_modules
