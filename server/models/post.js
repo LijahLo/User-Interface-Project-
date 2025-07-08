@@ -40,12 +40,12 @@ async function login(username,Comment) {
 }
 
 async function updatePost(id, Comment) {
-  const post = await post.updateOne({"_id": id}, {$set: { Comment: Comment}});
+  const post = await post.updatePost({"_id": id}, {$set: { Comment: Comment}});
   return post;
 }
 
-async function deletePost(id) {
-  await post.deleteOne({"_id": id});
+async function deletePost(Comment) {
+  await post.deleteOne({"Comment deleted": Comment});
 };
 
 async function getPost(username) {
@@ -53,5 +53,5 @@ async function getPost(username) {
 }
 
 module.exports = { 
-  register, login, Comment, deletePost
+  register, login, updatePost, deletePost
 };

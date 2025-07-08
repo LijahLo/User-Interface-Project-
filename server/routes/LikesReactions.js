@@ -1,12 +1,11 @@
 const express = require("express");
-const post = require('../models/post'); 
+const LikesReactions = require('../models/LikesReactions'); 
 const router = express.Router();
-
 
 router
   .post('/login', async (req, res) => {
     try {
-      const post = await post.login(req.body.username, req.body.Comment);
+      const LikesReactions  = await LikesReactions.login(req.body.username, req.body.Reaction);
       res.send({...user, password: undefined});
     } catch(error) {
       res.status(401).send({ message: error.message });
@@ -15,7 +14,7 @@ router
 
   .post('/register', async (req, res) => {
     try {
-      const post = await post.register(req.body.username, req.body.Comment);
+      const LikesReactions  = await LikesReactions.register(req.body.username, req.body.Reaction);
       res.send({...post, password: undefined});
     } catch(error) {
       res.status(401).send({ message: error.message }); 
@@ -24,7 +23,7 @@ router
 
   .put('/update', async (req, res) => {
     try {
-      const post = await post.updateComment(req.body.id, req.body.Comment);
+      const LikesReactions  = await LikesReactions.updateReaction(req.body.id, req.body.Reaction);
       res.send({...post, password: undefined});
     } catch(error) {
       res.status(401).send({ message: error.message });
@@ -33,11 +32,14 @@ router
 
   .delete('/delete', async (req, res) => {
     try {
-      await post.deletePost(req.body.id);
+      await LikesReactions.deletePost(req.body.id);
       res.send({ success: "Post deleted" });
     } catch(error) {
       res.status(401).send({ message: error.message });
     }
   })
+router.get('/', (req, res) => {
+  res.send("This route is working!");
+});
 
 module.exports = router;

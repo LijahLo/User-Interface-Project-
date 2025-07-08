@@ -4,10 +4,9 @@
   "description": "",
   "main": "profile.js",
   "scripts": {
-    "server": "nodemon index.js", 
-    "client": "npm start --prefix client", 
-    "dev": "concurrently\"npm run server\"npm run client\""
-    
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
   "homepage": "https://github.com/LijahLo/User-Interface-Project-#readme",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "dotenv": "^17.0.1",
     "express": "^5.1.0",
     "mongodb": "^6.17.0",
     "mongoose": "^8.16.1"

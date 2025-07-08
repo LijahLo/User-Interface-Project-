@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 
 const LikesReactionsSchema = new mongoose.Schema({
-  Like: { type: Integer, unique: true, required: true},
+  Like: { type: Intl, unique: true, required: true},
   Reaction: { type: Date, required: true},
   followers: [String],
   following: [String]
@@ -53,5 +53,5 @@ async function getLikesReactions(username) {
 }
 
 module.exports = { 
-  register, login, Reaction, LikesReactions 
+  register, login, deleteLikesReactions, updateLikesReactions 
 };

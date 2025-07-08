@@ -6,7 +6,7 @@ const path = require('path');
 
 app.use(express.json());
 
-const userRoutes = require('./server/routes/user');
+const userRoutes = require('./server/routes/user')
 const postRoutes = require('./server/routes/post')
 const LikesReactions = require('./server/routes/LikesReactions') 
 

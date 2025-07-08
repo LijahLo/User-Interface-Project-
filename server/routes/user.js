@@ -41,4 +41,7 @@ router
   })
 
 // 3. export router for use in index.js
+router.get('/', (req, res) => {
+  res.send("This route is working!");
+});
 module.exports = router;
