@@ -1,5 +1,5 @@
-import { fetchData } from "../../main.js";
-import { useState, useEffect } from "react";
+import {fetchData} from '../main';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
@@ -41,7 +41,7 @@ const RegisterForm = () => {
     <form onClick={onClick}>
     <h1 className = "text-center">Register</h1>
         <div className="container">
-        <hr>
+        
         <h2 className="text-center">name</h2>
         <label htmlFor="name" className="form-label">name</label>
         <input type="text" class="form-control" id="name" placeholder="name" 
@@ -50,8 +50,8 @@ const RegisterForm = () => {
         required >
         </input>
         
-        </hr>
-        <hr>
+        
+        
         <h2 className="text-center">userName</h2>
         <label htmlFor="username" class="form-label">userName</label>
         <input type="username" class="form-control" id="username" placeholder="username"
@@ -59,22 +59,22 @@ const RegisterForm = () => {
         value = {username}
         required>
         </input>
-        </hr>
-        <hr>
+        
+        
         <h2 className="text-center">Email</h2>
         <label htmlFor="email" class="form-label">Email address</label>
         <input type="email" class="form-control" id="email" placeholder="name@example.com"
         onChange={onChange}
         value = {email}></input>
-        </hr>
-        <hr>
+        
+
         <h2 className="text-center">Password</h2>
         <label htmlFor="password" class="form-label">Password</label>
         <textarea class="form-control" id="password" rows="1"
         onChange={onChange}
         value = {password} 
         required></textarea>
-        </hr>
+        
         <label htmlFor="password2" className="form-label">Confirm Password</label>
           <input 
             type="password" 

@@ -13,8 +13,8 @@ function App() {
       <Routes>
       <Route path = "/" element={<Navbar />}>
       <Route index element ={<Profile />}></Route>
-      <Route path = "Login" element={<LoginForm login={login}/>}/> 
-      <Route path = "Register" element={<RegisterForm />}/>
+      <Route path = "Login" element={<LoginForm.js />}/> 
+      <Route path = "Register" element={<RegisterForm.js />}/>
       </Route> 
       </Routes>  
       </BrowserRouter> 
@@ -23,5 +23,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

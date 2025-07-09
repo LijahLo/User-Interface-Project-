@@ -1,5 +1,5 @@
-import { fetchData } from "../../main.js";
-import { useState, useEffect } from "react";
+import {fetchData} from '../main';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -38,23 +38,23 @@ const LoginForm = () => {
     return(
     <div>
     <form onClick={onClick}>
+    <div className="container">
     <h1 className = "text-center">Login</h1>
-        <div className="container">
-        <hr>
+         
         <h2 className="text-center">Email</h2>
         <label htmlFor="email" class="form-label">Email address</label>
         <input type="email" class="form-control" id="email" placeholder="name@example.com"
         onChange={onChange}
         value = {email}></input>
-        </hr>
-        <hr>
+        
+        
         <h2 className="text-center">Password</h2>
         <label htmlFor="password" class="form-label">Password</label>
         <textarea class="form-control" id="password" rows="1"
         onChange={onChange}
         value = {password} 
         required></textarea>
-        </hr>
+        
         
     </div>
     </form>
